@@ -101,7 +101,7 @@ function Dashboard() {
                   color="success"
                   title="AASU"
                   date="updated 4 min ago"
-                  chart={sales}
+                  chart={tasks}
                 />
               </MDBox>
             </Grid>
@@ -111,7 +111,7 @@ function Dashboard() {
                   color="info"
                   title="Web Dev Club"
                   date="just updated"
-                  chart={tasks}
+                  chart={sales}
                 />
               </MDBox>
             </Grid>

@@ -15,11 +15,11 @@ Coded by www.creative-tim.com
 
 export default {
   sales: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    datasets: { label: "Sales", data: [50, 20, 10, 22, 50, 10, 40] },
+    labels: ["Sep", "Oct", "Nov"],
+    datasets: { label: "Events Participated", data: [17, 8, 10] },
   },
   tasks: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    datasets: { label: "Sales", data: [50, 20, 10, 22, 50, 10, 40] },
+    labels: ["Sep", "Oct", "Nov"],
+    datasets: { label: "Events Participated", data: [1, 3, 4] },
   },
 };

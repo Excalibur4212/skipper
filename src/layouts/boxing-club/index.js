@@ -84,7 +84,7 @@ render() {
                 <table className="table table-striped">
                     <thead>
                         <tr>
-                            <th>Member Id</th>
+                            <th>Id</th>
                             <th>Member Name</th>
                             <th>Member Email</th>
                         </tr>
