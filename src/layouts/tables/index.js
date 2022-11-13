@@ -13,12 +13,16 @@ import calendarTableData from "layouts/tables/data/calendarTableData";
 
 function Tables()
 {
-    const data = [];
+    const data = calendarTableData();
     for(var i = 0; i < 5; i++) for(var j = 0; j < 8; j++)
     {
         switch(i * 8 + j)
         {
-            case 0, 1, 36, 37, 38:
+            case 0:
+	    case 1:
+	    case 36:
+	    case 37:
+	    case 38:
                 data[i * 8 + j] = function()
                 {
                     <Grid item xs={1}>
@@ -28,7 +32,8 @@ function Tables()
                     </Grid>
                 };
                 break;
-            case 7, 39:
+            case 7:
+	    case 39:
                 data[i * 8 + j] = function()
                 {
                     <Grid item xs={5}>
