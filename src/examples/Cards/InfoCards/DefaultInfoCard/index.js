@@ -56,7 +56,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
         {description && !value ? null : <Divider />}
         {value && (
           <MDTypography variant="h5" fontWeight="medium">
-            {value}
+             {value} <Icon>stars</Icon>
           </MDTypography>
         )}
       </MDBox>

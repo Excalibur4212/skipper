@@ -203,7 +203,7 @@ function Tables()
                     {load()}
                 </Grid>
             </MDBox>
-            <Footer />
+            
         </DashboardLayout>
     );
 }
