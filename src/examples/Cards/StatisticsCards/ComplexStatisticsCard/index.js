@@ -25,7 +25,7 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-function ComplexStatisticsCard({ color, title, count, percentage, icon }) {
+function ComplexStatisticsCard({ color, title, count, body, icon }) {
   return (
     <Card>
       <MDBox display="flex" justifyContent="space-between" pt={1} px={2}>
@@ -60,11 +60,11 @@ function ComplexStatisticsCard({ color, title, count, percentage, icon }) {
             component="span"
             variant="button"
             fontWeight="bold"
-            color={percentage.color}
+            color="dark"
           >
-            {percentage.amount}
+            {body}
           </MDTypography>
-          &nbsp;{percentage.label}
+          &nbsp;
         </MDTypography>
       </MDBox>
     </Card>
@@ -74,11 +74,6 @@ function ComplexStatisticsCard({ color, title, count, percentage, icon }) {
 // Setting default values for the props of ComplexStatisticsCard
 ComplexStatisticsCard.defaultProps = {
   color: "info",
-  percentage: {
-    color: "success",
-    text: "",
-    label: "",
-  },
 };
 
 // Typechecking props for the ComplexStatisticsCard
@@ -95,20 +90,7 @@ ComplexStatisticsCard.propTypes = {
   ]),
   title: PropTypes.string.isRequired,
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  percentage: PropTypes.shape({
-    color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "white",
-    ]),
-    amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    label: PropTypes.string,
-  }),
+  body: PropTypes.string.isRequired,
   icon: PropTypes.node.isRequired,
 };
 

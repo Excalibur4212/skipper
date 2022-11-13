@@ -37,15 +37,7 @@ function PaymentMethod() {
 
   return (
     <Card id="delete-account">
-      <MDBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
-        <MDTypography variant="h6" fontWeight="medium">
-          Payment Method
-        </MDTypography>
-        <MDButton variant="gradient" color="dark">
-          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
-          &nbsp;add new card
-        </MDButton>
-      </MDBox>
+      
       <MDBox p={2}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>

@@ -27,7 +27,7 @@ import MDButton from "components/MDButton";
 // Material Dashboard 2 React context
 import { useMaterialUIController } from "context";
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({ name , number, icon, noGutter}) {
   const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
@@ -51,43 +51,25 @@ function Bill({ name, company, email, vat, noGutter }) {
           flexDirection={{ xs: "column", sm: "row" }}
           mb={2}
         >
+          <Icon> {icon} </Icon>
           <MDTypography variant="button" fontWeight="medium" textTransform="capitalize">
-            {name}
+            {name} : {number}
           </MDTypography>
 
           <MDBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
-            <MDBox mr={1}>
-              <MDButton variant="text" color="error">
-                <Icon>delete</Icon>&nbsp;delete
-              </MDButton>
-            </MDBox>
-            <MDButton variant="text" color={darkMode ? "white" : "dark"}>
-              <Icon>edit</Icon>&nbsp;edit
+            
+            <MDButton variant="text" color="info">
+              <Icon>book</Icon>&nbsp; Learn More
             </MDButton>
           </MDBox>
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
-          <MDTypography variant="caption" color="text">
-            Company Name:&nbsp;&nbsp;&nbsp;
-            <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
-              {company}
-            </MDTypography>
-          </MDTypography>
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
           <MDTypography variant="caption" color="text">
-            Email Address:&nbsp;&nbsp;&nbsp;
-            <MDTypography variant="caption" fontWeight="medium">
-              {email}
-            </MDTypography>
+            
           </MDTypography>
         </MDBox>
-        <MDTypography variant="caption" color="text">
-          VAT Number:&nbsp;&nbsp;&nbsp;
-          <MDTypography variant="caption" fontWeight="medium">
-            {vat}
-          </MDTypography>
-        </MDTypography>
       </MDBox>
     </MDBox>
   );
